@@ -1,0 +1,9 @@
+.image {
+    height: 550px;
+}
+
+@media only screen and (max-width: 400px) {
+    .image {
+        height: 350px;
+    }
+}
