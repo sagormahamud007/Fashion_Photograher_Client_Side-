@@ -1,0 +1,38 @@
+[
+    {
+        "name": "PORTRAIT",
+        "image": "https://landing.engotheme.com/html/jimydo/demo/assets/images/blog/blog-v2.jpg",
+        "hours": "Up to 2 Hours",
+        "imgCount": "2 Outfit Changes 2 Edited Images Hi-res images on cd",
+        "price": 100,
+        "title": "Planning a Winter Holiday? Islands Offers.",
+        "description": "It matter what style fried boyfriend etc or even what fabric from sik to heavy cotton go with whatever suits your personal style best."
+    },
+    {
+        "name": "FASHION",
+        "image": "https://landing.engotheme.com/html/jimydo/demo/assets/images/blog/photography-v2.jpg",
+        "price": 200,
+        "hours": "Up to 2 Hours",
+        "imgCount": "2 Outfit Changes 2 Edited Images Hi-res images on cd",
+        "title": " 12 photographers explain why storytelling needs a new look.",
+        "description": "Victoria's secret fas hion show: the best look It matter what style fried boyfriend etc or even what fabric from sik to heavy cotton go with whatever suits your personal style best."
+    },
+    {
+        "name": "GROUP SHOTS",
+        "image": "https://landing.engotheme.com/html/jimydo/demo/assets/images/blog/photography-v1.jpg",
+        "price": 400,
+        "hours": "Up to 2 Hours",
+        "imgCount": "2 Outfit Changes 2 Edited Images Hi-res images on cd",
+        "title": "A suitcase of lost photos inspired this artist to retrace her past.",
+        "description": "It matter what style fried boyfriend etc or even what fabric from sik to heavy cotton go with whatever suits your personal style best."
+    },
+    {
+        "name": "WEDDING",
+        "image": "https://landing.engotheme.com/html/jimydo/demo/assets/images/blog/photography-v1.jpg",
+        "price": 800,
+        "hours": "Up to 2 Hours",
+        "imgCount": "2 Outfit Changes 2 Edited Images Hi-res images on cd",
+        "title": "A suitcase of lost photos inspired this artist to retrace her past.",
+        "description": "It matter what style fried boyfriend etc or even what fabric from sik to heavy cotton go with whatever suits your personal style best."
+    }
+]

@@ -4,12 +4,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/header-img/images.jpg'
+import './Header.css'
+
 const Header = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
-                <Navbar.Brand href="#">WEDDING PHOTOGRAPHER
+                <Navbar.Brand href="#">
                     <img src={logo} alt="" />
+                    <span className='header-name'> CREATIVE PHOTOGRAPHER</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
