@@ -1,0 +1,29 @@
+.before-after {
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+
+.before-after:hover {
+    color: burlywood;
+}
+
+.before-after::after {
+    content: '';
+    width: 120px;
+    height: 2px;
+    position: absolute;
+    background-color: gray;
+    margin-top: 14px;
+    margin-left: 20px;
+}
+
+.before-after::before {
+    content: '';
+    width: 120px;
+    height: 2px;
+    position: absolute;
+    background-color: gray;
+    margin-left: -140px;
+    margin-top: 14px;
+}

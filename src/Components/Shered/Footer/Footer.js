@@ -4,8 +4,8 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import './Footer.css'
 const Footer = () => {
     return (
-        <div className='bg-dark '>
-            <div className="row px-4">
+        <div className='bg-dark overflow-hidden'>
+            <div className="row px-3">
                 <div className="col-lg-3 col-md-3">
                     <h1 className='text-light mt-4'>Olbia</h1>
                 </div>
@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
             </div>
             <footer>
-                <p className='bg py-3 text-center text-light mt-2'>Copyright @ Md shagor mahamud-2023</p>
+                <p className='bg py-3 text-center text-light mt-4'>Copyright @ Md shagor mahamud-2023</p>
             </footer>
         </div>
     );
