@@ -16,7 +16,7 @@ const Carousels = () => {
                     <Carousel.Caption className='top-50'>
                         <div className='banner-inf'>
                             <h3>Professional Photographer </h3>
-                            <button className='py-2 px-4 border-0 bg-info rounded text-light'>HERE ME</button>
+                            <button className='py-2 px-4 border-0 bg-info rounded text-light'>HIRE ME</button>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>

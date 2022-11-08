@@ -5,7 +5,7 @@
 }
 
 .header-name:hover {
-    color: goldenrod;
+    color: rgb(8, 159, 230);
 }
 
 .header-link {
@@ -13,4 +13,8 @@
     font-weight: 600;
     color: beige;
     margin-top: 10px;
+}
+
+.header-link:hover {
+    color: rgb(8, 159, 230);
 }
