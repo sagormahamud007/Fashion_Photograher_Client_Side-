@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
@@ -7,20 +7,20 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
-    const { logInUser } = useState(AuthContext)
+    const { logInUser } = useContext(AuthContext)
 
     const handleAddUser = (event) => {
         event.preventDefault()
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+
 
         logInUser(email, password)
             .then(result => {
                 const user = result.user;
                 form.reset('')
-                console.log(user);
+                toast('login success')
             })
             .catch((error) => {
                 const errorCode = error.code;

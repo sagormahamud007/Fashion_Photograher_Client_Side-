@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import './Footer.css'
 const Footer = () => {
     return (
-        <div className='bg-dark overflow-hidden'>
+        <div className='bg-dark overflow-hidden mt-5'>
             <div className="row px-3">
                 <div className="col-lg-3 col-md-3">
                     <h1 className='text-light mt-4'>Olbia</h1>

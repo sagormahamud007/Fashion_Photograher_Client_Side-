@@ -2,8 +2,34 @@
     height: 550px;
 }
 
-@media only screen and (max-width: 400px) {
+.banner-info h3 {
+    font-size: 50px;
+    text-shadow: 5px 8px 16px rgb(114, 138, 216);
+    font-weight: 900;
+    color: rgb(224, 224, 172);
+}
+
+.banner-inf h3 {
+    font-size: 50px;
+    text-shadow: 5px 8px 16px rgb(114, 138, 216);
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+
+.banner-inf h3:hover {
+    color: goldenrod;
+}
+
+@media only screen and (max-width: 500px) {
     .image {
         height: 350px;
+    }
+
+    .banner-info h3 {
+        font-size: 20px;
+    }
+
+    .banner-inf h3 {
+        font-size: 30px;
     }
 }

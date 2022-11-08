@@ -72,7 +72,7 @@ const SignUp = () => {
                 <Form onSubmit={handleAddUser}>
                     <div className='text-center'>
                         <h1>Sign Up</h1>
-                        <p>Already a Member? <Link to='/login'>Login</Link></p>
+                        <p>Already a Member? <Link to='/login'>Login now</Link></p>
                     </div>
                     <Form.Group className="mb-3" controlId="formBasicText">
                         <Form.Control className='border-0  border-bottom' type="text"

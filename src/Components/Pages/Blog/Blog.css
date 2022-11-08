@@ -1,0 +1,8 @@
+.blog-img {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHLlSo9tvwsYa6WYO2sXaEDQvpHaSaXHZgiw&usqp=CAU");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0;
+    background-size: 100% 100%;
+    position: relative;
+}

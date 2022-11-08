@@ -1,4 +1,16 @@
 .header-name {
-    text-shadow: 5px 8px 16px rgb(22, 70, 226);
+    text-shadow: 5px 8px 16px rgb(205, 215, 248);
     font-weight: 600;
+    color: beige;
+}
+
+.header-name:hover {
+    color: goldenrod;
+}
+
+.header-link {
+    text-shadow: 5px 8px 16px rgb(205, 215, 248);
+    font-weight: 600;
+    color: beige;
+    margin-top: 10px;
 }
