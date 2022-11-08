@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/header-img/images.jpg'
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 import './Header.css'
 
 const Header = () => {
+    const { name } = useContext(AuthContext)
     return (
         <div className='overflow-hidden'>
             <Navbar bg="light" expand="lg">
@@ -22,6 +24,7 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
+
                             <Link className=' me-4 text-decoration-none' to='/'>Home</Link>
                             <Link className=' me-4 text-decoration-none' to='/blog'>Blog</Link>
                             <Link className='me-4 text-decoration-none' to='/login'>Login</Link>
