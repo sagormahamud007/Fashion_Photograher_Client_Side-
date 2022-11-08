@@ -36,14 +36,14 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, provider)
     }
 
-    // // sideEffect
-    // useEffect(() => {
-    //     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-    //         setUser(currentUser)
+    // sideEffect
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser)
 
-    //     })
-    //     return () => unSubscribe();
-    // }, [])
+        })
+        return () => unSubscribe();
+    }, [])
 
 
     const AuthInfo = {

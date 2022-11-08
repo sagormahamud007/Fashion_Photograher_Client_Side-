@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
@@ -15,9 +17,17 @@ const Login = () => {
         console.log(email, password);
 
         logInUser(email, password)
+            .then(result => {
+                const user = result.user;
+                form.reset('')
+                console.log(user);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                toast(errorMessage)
+            });
     }
-
-
 
     return (
         <div>
