@@ -1,10 +1,11 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
 import './SingleService.css'
 
 const SingleService = ({ service }) => {
-    const { image, price, ratings, title, description, name } = service;
+    const { image, price, ratings, title, description, _id } = service;
     return (
         <div className='mx-auto shadow-lg' data-aos="fade-down-right">
             <Card style={{ width: '22rem', height: '31rem' }}>
@@ -25,7 +26,7 @@ const SingleService = ({ service }) => {
                         <FaStar className='text-warning'></FaStar>
                         {ratings}</p>
                     <div className='details-btn'>
-                        <button className='btn'>Details</button>
+                        <Link to={`/services/${_id}`}><button className='btn'>View Details</button></Link>
                     </div>
                 </Card.Body>
             </Card>

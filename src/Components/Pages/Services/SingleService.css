@@ -1,7 +1,7 @@
 .details-btn .btn {
     width: 100%;
     margin-left: -15px;
-    background-color: #004bec;
+    background-color: #0ba1f8;
     color: #0E161A;
     position: absolute;
     bottom: 0%;
@@ -13,5 +13,5 @@
 }
 
 .details-btn .btn:hover {
-    background-color: rgb(4, 166, 241);
+    background-color: rgb(235, 231, 7);
 }
