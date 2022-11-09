@@ -21,7 +21,7 @@ const Card = () => {
                 }
             </div>
             <div className='text-center my-4'>
-                <Link to='/services'> <button className='bg-info py-2 px-4 rounded border-0 text-light'>Show More</button></Link>
+                <Link to='/services'> <button className='bg-info py-2 px-4 rounded border-0 text-light'>See All</button></Link>
 
             </div>
         </div>

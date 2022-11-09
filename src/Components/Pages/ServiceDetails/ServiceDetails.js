@@ -3,6 +3,8 @@ import { Button, Card } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import { useLoaderData } from "react-router-dom";
 import Review from '../Review/Review';
+import { Link } from 'react-router-dom';
+
 
 const ServiceDetails = () => {
     const service = useLoaderData()
@@ -32,12 +34,14 @@ const ServiceDetails = () => {
                             <FaStar className='text-warning'></FaStar>
                             {ratings}
                         </p>
-                        <Button variant="info">Show more details</Button>
+                        <Link to='/services'><Button className='px-5' variant="info">Go beak</Button></Link>
                     </Card.Body>
                 </Card>
             </div>
             <div className="col-lg-6">
-                <Review></Review>
+                <Review
+                    service={service}
+                ></Review>
             </div>
         </div>
     );
