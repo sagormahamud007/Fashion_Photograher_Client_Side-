@@ -1,42 +1,62 @@
 [
     {
-        "name": "PORTRAIT",
-        "image": "https://landing.engotheme.com/html/jimydo/demo/assets/images/blog/blog-v2.jpg",
-        "hours": "Up to 2 Hours",
+        "name": "Rangamati",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7OxCNaFqfNABw2DMYkohRRzBCdb7DLeMaTA&usqp=CAU",
+        "hours": "Up to 9 Hours",
         "imgCount": "2 Outfit Changes 2 Edited Images Hi-res images on cd",
         "price": 100,
         "ratings": 5,
-        "title": "Planning a Winter Holiday? Islands Offers.",
-        "description": "It matter what style fried boyfriend etc or even what fabric from sik to heavy cotton go with whatever suits your personal style best."
+        "title": "Photography Tour in Rangamati",
+        "description": "suspension bridge,This bridge is a 365 feet long bridge over the Kaptai Lake at the end of Rangamati city, it is the biggest attraction of Rangamati."
     },
     {
         "name": "FASHION",
         "image": "https://landing.engotheme.com/html/jimydo/demo/assets/images/blog/photography-v2.jpg",
         "price": 200,
         "ratings": 4.5,
-        "hours": "Up to 2 Hours",
+        "hours": "Up to 7 Hours",
         "imgCount": "2 Outfit Changes 2 Edited Images Hi-res images on cd",
-        "title": " 12 photographers explain why storytelling needs a new look.",
-        "description": "Victoria's secret fas hion show: the best look It matter what style fried boyfriend etc or even what fabric from sik to heavy cotton go with whatever suits your personal style best."
+        "title": " Professional private photo shoot anywhere in Bangladesh",
+        "description": "It matter what style fried boyfriend etc or even what fabric from sik to heavy cotton go with whatever suits your personal style best."
     },
     {
         "name": "GROUP SHOTS",
         "image": "https://landing.engotheme.com/html/jimydo/demo/assets/images/blog/photography-v1.jpg",
         "price": 400,
         "ratings": 4,
-        "hours": "Up to 2 Hours",
+        "hours": "Up to 5 Hours",
         "imgCount": "2 Outfit Changes 2 Edited Images Hi-res images on cd",
-        "title": "A suitcase of lost photos inspired this artist to retrace her past.",
-        "description": "It matter what style fried boyfriend etc or even what fabric from sik to heavy cotton go with whatever suits your personal style best."
+        "title": "Wedding photo shoot is done anywhere in Bangladesh",
+        "description": "The wedding photo shoot is rented for 3 daysor 2 days, we shoot from the first day to the last day of the wedding, if you like, contact us."
     },
     {
-        "name": "WEDDING",
-        "image": "https://landing.engotheme.com/html/jimydo/demo/assets/images/blog/photography-v1.jpg",
-        "price": 800,
+        "name": "Lalpur Tour",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHmFlPbG8a8D8QqUg3Hsc205H2Za3NAYpQjQ&usqp=CAU",
+        "price": 130,
         "ratings": 5,
-        "hours": "Up to 2 Hours",
+        "hours": "Up to 12 Hours",
         "imgCount": "2 Outfit Changes 2 Edited Images Hi-res images on cd",
-        "title": "A suitcase of lost photos inspired this artist to retrace her past.",
-        "description": "It matter what style fried boyfriend etc or even what fabric from sik to heavy cotton go with whatever suits your personal style best."
+        "title": "Mirpur Zoo Tour",
+        "description": "Bangladesh National Zoo is a zoo located in Mirpur, Dhaka. It is an institution under the Ministry of Fisheries and Livestock, Government of Bangladesh. The zoo was established in 1950 as an animal exhibition in the High Court premises. It was later shifted to its present location in 1974."
+    },
+    {
+        "name": "Cox's Bazar",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Gm7KcBVmivR-dz3l9_-n86PyM6gr_LNiYw&usqp=CAU",
+        "price": 120,
+        "ratings": 5,
+        "hours": "Up to 11 Hours",
+        "imgCount": "2 Outfit Changes 2 Edited Images Hi-res images on cd",
+        "title": "Cox's Bazar Beach Tour",
+        "description": "Located in Cox's Bazar - 159 km from Chittagong. The location of Cox's Bazar district is bordering the Bay of Bengal to the south east. Cox's Bazar is a unique combination of mountains, sea, islands, rivers and plains. The district has the world's longest sandy beach with a length of 120 km."
+    },
+    {
+        "name": "Shopnopuri",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTE1PoJLInW9zHFj1ayXiPmvBnYjdCMk6d3Q&usqp=CAU",
+        "price": 110,
+        "ratings": 5,
+        "hours": "Up to 10 Hours",
+        "imgCount": "2 Outfit Changes 2 Edited Images Hi-res images on cd",
+        "title": "Shopnopuri Tour",
+        "description": "Swapnapuri wants Aftabganj in Dinajpur Swapan Ganj of Rangpur. Which is 15 KM from Sadar Upazila: Northwards within Khalippur under No. 9 Kushdah Abir."
     }
 ]

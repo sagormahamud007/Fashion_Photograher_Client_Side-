@@ -26,7 +26,7 @@ const Header = () => {
                 <Container fluid>
                     <Navbar.Brand href="#">
                         <div>
-                            <span className='header-name'> CREATIVE PHOTOGRAPHER</span>
+                            <span className='header-name'>FASHION PHOTOGRAPHER</span>
                         </div>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />

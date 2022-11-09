@@ -1,0 +1,17 @@
+.details-btn .btn {
+    width: 100%;
+    margin-left: -15px;
+    background-color: #004bec;
+    color: #0E161A;
+    position: absolute;
+    bottom: 0%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 10px 0;
+    color: #ffffff;
+}
+
+.details-btn .btn:hover {
+    background-color: rgb(4, 166, 241);
+}
