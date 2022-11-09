@@ -1,10 +1,9 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
+import { Card } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
-import './SingleService.css'
 
-const SingleService = ({ service }) => {
-    const { image, price, ratings, title, description, name } = service;
+const SingleCard = ({ service }) => {
+    const { image, price, ratings, title, description } = service;
     return (
         <div className='mx-auto shadow-lg' data-aos="fade-down-right">
             <Card style={{ width: '22rem', height: '31rem' }}>
@@ -24,13 +23,11 @@ const SingleService = ({ service }) => {
                         <FaStar className='text-warning'></FaStar>
                         <FaStar className='text-warning'></FaStar>
                         {ratings}</p>
-                    <div className='details-btn'>
-                        <button className='btn'>Details</button>
-                    </div>
+
                 </Card.Body>
             </Card>
         </div>
     );
 };
 
-export default SingleService;
+export default SingleCard;
