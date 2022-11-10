@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Live-Site : https://wedding-photographer-1bcb6.web.app/
+
+
+### * First, I install all the project's recommendations, then finish the route definition, and then bring a header from bootstrap to the home page and show it in the navbar.
+
+### * Then sign in and login to login and sign in Design the form, then go to Firebase and install Firebase, then open the project in Firebase and complete the login and sign-in authentication.
+
+### * Then on the home page a slider shows some images with it, then I go to the server site where the server is running on 5000 prot, after starting the server I connect to the mongdb database.
+
+### * I put 6 services in that MongDB, then from the server site, from that database, through the server site, I brought all the data and showed it on the client site, first on the home page, I showed 3 through the limit on the server site.
+
+### * Then show 6 data on the service page, then put the user data in MongDB and bring that data and show it on my review page, there is a block section where there are 4 questions, the user is allowed to order on my service page etc.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
