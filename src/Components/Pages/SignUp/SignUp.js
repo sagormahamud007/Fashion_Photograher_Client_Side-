@@ -10,8 +10,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import './SignUp.css';
 
 
+
 const SignUp = () => {
-    const { createUser, handleUpdate, googleSignIn } = useContext(AuthContext)
+    const { createUser, handleUpdate, googleSignIn, loading } = useContext(AuthContext)
     const [error, setError] = useState('')
 
     //handle signUp user function
@@ -35,7 +36,7 @@ const SignUp = () => {
             userPassword: password
         }
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://fashion-photographer-server.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -45,19 +46,38 @@ const SignUp = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                // if (data.acknowledged) {
-                //     toast('Order placed successfully')
-                //     form.reset();
-                // }
+                if (data.acknowledged) {
+                    form.reset();
+                }
             })
             .catch(err => console.error(err))
+
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 handleUpdateProfile(name, photoURL)
                 form.reset('')
-                console.log(user);
+                toast('SignUp Successfully')
+
+
+                const currentUser = {
+                    email: user.email
+                }
+                //get jwt token
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('token', data.token)
+                    })
+
             })
             .catch((error) => {
                 const errorCode = error.code;

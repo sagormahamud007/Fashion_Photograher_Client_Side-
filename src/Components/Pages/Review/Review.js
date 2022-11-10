@@ -1,4 +1,3 @@
-import { Toast } from 'bootstrap';
 import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -8,9 +7,7 @@ import './Review.css'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Review = ({ service }) => {
-    const { _id, image, title, price } = service;
-    console.log(_id);
+const Review = () => {
     const { user } = useContext(AuthContext)
     const handleUserOrder = (event) => {
         event.preventDefault()
@@ -22,9 +19,6 @@ const Review = ({ service }) => {
         const address = form.address.value;
 
         const UserOrders = {
-            services: _id,
-            serviceName: title,
-            price,
             customer: name,
             email,
             phoneNumber,
@@ -33,7 +27,7 @@ const Review = ({ service }) => {
         }
 
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://fashion-photographer-server.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -75,9 +69,11 @@ const Review = ({ service }) => {
                     <textarea className="form-control" name='message' id="exampleFormControlTextarea1" placeholder='Your Message' rows="3" required></textarea>
                 </div>
 
-                <Button variant="info" type="submit">
-                    <FaCamera></FaCamera>Place your order
-                </Button>
+                <div className='text-center'>
+                    <Button variant="info" className=' py-2 px-4' type="submit">
+                        <FaCamera className='me-3'></FaCamera>Place your order
+                    </Button>
+                </div>
             </Form>
         </div>
     );

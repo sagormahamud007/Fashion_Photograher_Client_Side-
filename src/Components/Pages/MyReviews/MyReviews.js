@@ -1,48 +1,33 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
+import { Card, Image } from 'react-bootstrap';
+import { FaStar } from 'react-icons/fa';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import OderRow from './OderRow';
-import './OrderRow.css'
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const MyReviews = () => {
     const { user } = useContext(AuthContext)
-    const [orders, setOrders] = useState([])
-
-
-    useEffect(() => {
-        fetch(`http://localhost:5000/orders?=${user?.email}`)
-            .then(res => res.json())
-            .then(data => setOrders(data))
-    }, [user?.email])
-
-    const handleDelete = id => {
-        const deleted = window.confirm('Are you sure')
-        if (deleted) {
-            fetch(`http://localhost:5000/orders/${id}`, {
-                method: "DELETE",
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if (data.deletedCount > 0) {
-                        toast('Deleted successfully')
-                        const remaining = orders.filter(odr => odr._id !== id);
-                        setOrders(remaining)
-                    }
-                })
-
-        }
-    }
+    console.log(user);
+    const { email, photoURL, displayName } = user;
     return (
-        <div className='bg-info container py-3 rounded order-container'>
-            {
-                orders.map(order => <OderRow
-                    key={order._id}
-                    order={order}
-                    handleDelete={handleDelete}
-                ></OderRow>)
-            }
+        <div className='container my-5'>
+            <h2 className='text-info fw-bold fs-3'>My Review</h2>
+            <Card border="info" style={{ width: '16rem' }}>
+                <Card.Header> <Image style={{ height: '90px', margin: '0 auto' }} roundedCircle src={photoURL}></Image> </Card.Header>
+                <Card.Body>
+                    <Card.Title>{displayName}</Card.Title>
+                    <Card.Text>
+                        {email}
+                    </Card.Text>
+                    <Card.Text>
+                        <FaStar className='text-warning'></FaStar>
+                        <FaStar className='text-warning'></FaStar>
+                        <FaStar className='text-warning'></FaStar>
+                        <FaStar className='text-warning'></FaStar>
+                        <FaStar className='text-warning'></FaStar>
+                        <span>$ 5</span>
+                    </Card.Text>
+                </Card.Body>
+            </Card>
         </div>
     );
 };

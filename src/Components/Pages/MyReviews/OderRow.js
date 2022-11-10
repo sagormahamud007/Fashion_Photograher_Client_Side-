@@ -2,8 +2,8 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 
 const OderRow = ({ order, handleDelete }) => {
-    const { serviceName, price, phoneNumber, customer, _id } = order;
-
+    console.log(order);
+    const { message, phoneNumber, address, customer, _id, } = order;
 
     return (
         <div className='my-5 container bg-info'>
@@ -11,9 +11,9 @@ const OderRow = ({ order, handleDelete }) => {
                 <thead>
                     <tr>
                         <th>First Name</th>
-                        <th>Service</th>
+                        <th>Address</th>
                         <th>Phone</th>
-                        <th>Price</th>
+                        <th>message</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
@@ -21,9 +21,9 @@ const OderRow = ({ order, handleDelete }) => {
                     <tr>
 
                         <td>{customer}</td>
-                        <td >{serviceName}</td>
+                        <td >{address}</td>
                         <td>{phoneNumber}</td>
-                        <td> ${price}</td>
+                        <td> {message}</td>
                         <td> <button onClick={() => handleDelete(_id)}>Delete</button> <button className='ms-2'>Edit </button></td>
                     </tr>
                 </tbody>

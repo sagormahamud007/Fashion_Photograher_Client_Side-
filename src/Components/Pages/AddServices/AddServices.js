@@ -1,9 +1,10 @@
-import React from 'react';
+import Review from '../Review/Review';
 
 const AddServices = () => {
+
     return (
-        <div>
-            <h1>This is Add services component</h1>
+        <div className='container'>
+            <Review></Review>
         </div>
     );
 };

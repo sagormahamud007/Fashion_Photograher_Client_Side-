@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Spinner } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -8,10 +9,10 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
     const { logInUser } = useContext(AuthContext)
-    let location = useLocation()
-    let navigate = useNavigate()
+    const location = useLocation()
+    const navigate = useNavigate()
 
-    const from = location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || "/";
 
 
     const handleAddUser = (event) => {
@@ -24,9 +25,28 @@ const Login = () => {
         logInUser(email, password)
             .then(result => {
                 const user = result.user;
+                <Spinner animation="border" variant="success" />
                 form.reset('')
-                navigate(from, { replace: true });
                 toast('login success')
+
+                const currentUser = {
+                    email: user.email
+                }
+                //get jwt token
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('token', data.token)
+                    })
+
+                navigate(from, { replace: true });
             })
             .catch((error) => {
                 const errorCode = error.code;

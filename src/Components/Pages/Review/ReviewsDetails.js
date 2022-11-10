@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import SingleReview from './SingleReview';
 import './ReviewDetails.css'
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const ReviewsDetails = () => {
+    const { user } = useContext(AuthContext)
     const [users, setUsers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://fashion-photographer-server.vercel.app/users')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [])
@@ -23,7 +26,15 @@ const ReviewsDetails = () => {
                     ></SingleReview>)
                 }
             </div>
-            <button className='border-0 bg-info my-4 py-2 px-4 rounded'>Add Review</button>
+            {
+                user?.email ? <>
+                    <Link to='/reviews'><button className='border-0 bg-info my-4 py-2 px-4 rounded'>My Review</button></Link>
+
+                    <Link to='/addService'><button className='border-0 bg-info my-4 py-2 px-4 rounded ms-3'>Add Service</button></Link>
+                </>
+                    :
+                    <Link to='/'><button className='border-0 bg-info my-4 py-2 px-4 rounded ms-3'>Go home</button></Link>
+            }
         </div>
 
     );

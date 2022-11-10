@@ -1,24 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import SingleService from './SingleService';
 import './Services.css'
+import AddUserService from './AddUserService';
+
 
 const Services = () => {
     const [Services, setServices] = useState([]);
 
+
+
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://fashion-photographer-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
     return (
-        <div className='service-Container container mt-5'>
+        <div>
+            <div className='service-Container container mt-5'>
 
-            {
-                Services.map(service => <SingleService
-                    key={service._id}
-                    service={service}
-                ></SingleService>)
-            }
+                {
+                    Services.map(service => <SingleService
+                        key={service._id}
+                        service={service}
+                    >
+                    </SingleService>)
+                }
+            </div>
+            <div className='mt-5'>
+                <AddUserService></AddUserService>
+            </div>
         </div>
     );
 };
