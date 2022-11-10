@@ -6,12 +6,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useTitle from '../../useTitle/UseTitle';
 
 const Login = () => {
     const { logInUser } = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
-
+    useTitle('Login')
     const from = location.state?.from?.pathname || "/";
 
 
@@ -33,7 +34,7 @@ const Login = () => {
                     email: user.email
                 }
                 //get jwt token
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://fashion-photographer-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

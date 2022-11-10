@@ -8,12 +8,15 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './SignUp.css';
+import useTitle from '../../useTitle/UseTitle';
 
 
 
 const SignUp = () => {
     const { createUser, handleUpdate, googleSignIn, loading } = useContext(AuthContext)
     const [error, setError] = useState('')
+
+    useTitle('SignUp')
 
     //handle signUp user function
     const handleAddUser = (event) => {
@@ -24,6 +27,8 @@ const SignUp = () => {
         const photoURL = form.photoURL.value;
         const password = form.password.value;
         console.log(name, email, photoURL, password);
+
+
 
         if (password.length < 6) {
             toast('Password must be 6 character')
@@ -65,7 +70,7 @@ const SignUp = () => {
                     email: user.email
                 }
                 //get jwt token
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://fashion-photographer-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

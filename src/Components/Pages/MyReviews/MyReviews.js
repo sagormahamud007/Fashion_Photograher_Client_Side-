@@ -2,12 +2,15 @@ import React, { useContext } from 'react';
 import { Card, Image } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useTitle from '../../useTitle/UseTitle';
 
 
 const MyReviews = () => {
     const { user } = useContext(AuthContext)
     console.log(user);
     const { email, photoURL, displayName } = user;
+
+    useTitle('Reviews')
     return (
         <div className='container my-5'>
             <h2 className='text-info fw-bold fs-3'>My Review</h2>
