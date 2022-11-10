@@ -28,6 +28,29 @@ const SignUp = () => {
             toast('Password must be 6 character')
             return;
         }
+        const userCollection = {
+            userName: name,
+            userEmail: email,
+            userPhoto: photoURL,
+            userPassword: password
+        }
+
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userCollection)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                // if (data.acknowledged) {
+                //     toast('Order placed successfully')
+                //     form.reset();
+                // }
+            })
+            .catch(err => console.error(err))
 
         createUser(email, password)
             .then(result => {

@@ -2,8 +2,8 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import { useLoaderData } from "react-router-dom";
-import Review from '../Review/Review';
 import { Link } from 'react-router-dom';
+import ReviewsDetails from '../Review/ReviewsDetails';
 
 
 const ServiceDetails = () => {
@@ -39,9 +39,7 @@ const ServiceDetails = () => {
                 </Card>
             </div>
             <div className="col-lg-6">
-                <Review
-                    service={service}
-                ></Review>
+                <ReviewsDetails></ReviewsDetails>
             </div>
         </div>
     );

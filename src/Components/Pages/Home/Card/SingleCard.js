@@ -2,13 +2,17 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const SingleCard = ({ service }) => {
     const { image, price, ratings, title, description, _id } = service;
     return (
         <div className='mx-auto shadow-lg' data-aos="fade-down-right">
             <Card style={{ width: '22rem', height: '31rem' }}>
-                <Card.Img variant="top" src={image} />
+                <PhotoProvider>
+                    <PhotoView src={image}><img src={image} alt="" /></PhotoView>
+                </PhotoProvider>
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>

@@ -43,23 +43,24 @@ const Header = () => {
 
                             <Link className=' me-5 text-decoration-none header-link' to='/services'>Services</Link>
 
-                            <Link className=' me-5 text-decoration-none header-link' to='/reviews'>My reviews</Link>
-
-                            <Link className=' me-5 text-decoration-none header-link' to='/addService'>Add Service</Link>
 
                             <Link className=' me-5 text-decoration-none header-link' to='/blog'>Blog</Link>
 
-                            {
-                                user?.photoURL ?
-                                    <Image style={{ height: '40px' }} roundedCircle
-                                        src={user?.photoURL}></Image>
-                                    : <FaUser></FaUser>
-                            }
+
 
                             {
                                 user?.uid ?
                                     <>
-                                        {/* <span className='text-light'> {user?.displayName}</span> */}
+
+                                        <Link className=' me-5 text-decoration-none header-link' to='/reviews'>My reviews</Link>
+
+                                        <Link className=' me-5 text-decoration-none header-link' to='/addService'>Add Service</Link>
+                                        {
+                                            user?.photoURL ?
+                                                <Image style={{ height: '40px' }} roundedCircle
+                                                    src={user?.photoURL}></Image>
+                                                : <FaUser></FaUser>
+                                        }
                                         <button
                                             onClick={handleSignOut} className='mx-5 bg-info border-0 text-dark rounded py-2 px-3'>Log Out
                                         </button>

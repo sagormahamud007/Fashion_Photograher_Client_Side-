@@ -8,10 +8,10 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
     const { logInUser } = useContext(AuthContext)
-    const location = useLocation()
-    const navigate = useNavigate()
+    let location = useLocation()
+    let navigate = useNavigate()
 
-    const from = location.state?.from?.pathname || "/";
+    const from = location.state?.from?.pathname || '/';
 
 
     const handleAddUser = (event) => {
@@ -24,8 +24,8 @@ const Login = () => {
         logInUser(email, password)
             .then(result => {
                 const user = result.user;
-                navigate(from, { replace: true });
                 form.reset('')
+                navigate(from, { replace: true });
                 toast('login success')
             })
             .catch((error) => {
